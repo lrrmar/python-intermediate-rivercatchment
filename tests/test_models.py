@@ -49,3 +49,56 @@ def test_daily_mean_integers():
 
     # Need to use Pandas testing functions to compare arrays
     pdt.assert_frame_equal(daily_mean(test_input), test_result)
+
+def test_daily_max_random():
+    """Test that mean function works for an array of random real numbers"""
+    from catchment.models import daily_max
+    from numpy.random import rand
+    import numpy as np
+
+
+    test_array = rand(3,2)*10
+    max_array = np.max(test_array, axis=0, keepdims=True)
+
+    test_input =pd.DataFrame(
+                     data = test_array.tolist(),
+                     index=[pd.to_datetime('2000-01-01 01:00'),
+                            pd.to_datetime('2000-01-01 02:00'),
+                            pd.to_datetime('2000-01-01 03:00')],
+                     columns=['A','B']
+    )
+    test_result = pd.DataFrame(
+                     data=max_array.tolist(),
+                     index=[datetime.date(2000, 1, 1)],
+                     columns=['A', 'B']
+    )
+
+    # Need to use Pandas testing functions to compare arrays
+    pdt.assert_frame_equal(daily_max(test_input), test_result)
+
+def test_daily_min_random():
+    """Test that mean function works for an array of random real numbers"""
+    from catchment.models import daily_min
+    from numpy.random import rand
+    import numpy as np
+
+
+    test_array = rand(3,2)*10
+    min_array = np.min(test_array, axis=0, keepdims=True)
+
+    test_input =pd.DataFrame(
+                     data = test_array.tolist(),
+                     index=[pd.to_datetime('2000-01-01 01:00'),
+                            pd.to_datetime('2000-01-01 02:00'),
+                            pd.to_datetime('2000-01-01 03:00')],
+                     columns=['A','B']
+    )
+    test_result = pd.DataFrame(
+                     data=min_array.tolist(),
+                     index=[datetime.date(2000, 1, 1)],
+                     columns=['A', 'B']
+    )
+
+    # Need to use Pandas testing functions to compare arrays
+    pdt.assert_frame_equal(daily_min(test_input), test_result)
+
