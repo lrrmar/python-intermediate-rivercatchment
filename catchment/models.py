@@ -7,7 +7,12 @@ data for a single measurement site, and each row represents a single measurement
 time across all sites.
 """
 
+import numpy as np
 import pandas as pd
+
+def data_normalise(data):
+    max = np.array(np.max(data, axis=0))
+    return data / max[np.newaxis, :]
 
 def read_variable_from_csv(filename):
     """Reads a named variable from a CSV file, and returns a
@@ -41,17 +46,17 @@ def daily_total(data):
 
     :data: A pandas data object
     :returns: Total of data"""
-    
+
     return data.groupby(data.index.date).sum()
 
 def daily_mean(data):
     """Calculate the daily mean of a 2D data array.
 
     Index must be np.datetime64 compatible format.
-    
+
     :data: A pandas data object
     :returns: Mean of data"""
-    
+
     return data.groupby(data.index.date).mean()
 
 
@@ -62,8 +67,8 @@ def daily_max(data):
 
     :data: A pandas data object
     :returns: Max of data"""
-    
-    
+
+
     return data.groupby(data.index.date).max()
 
 
