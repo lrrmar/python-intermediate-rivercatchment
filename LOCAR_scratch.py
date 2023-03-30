@@ -27,3 +27,6 @@ def is_site_within_catchment(site_dataframe, catchment_dataframe):
     else:
        return False
 
+from shapely.geometry import Point
+
+position = gpd.GeoDataFrame(geometry=)

@@ -137,6 +137,16 @@ class Site(Location):
             [self.measurements[key].series[-1:] for key in self.measurements.keys()],
             axis=1).sort_index()
 
+    @property
+    def total_measurements(self):
+        """ Returns the total number of measurements taken at site."""
+        measurement_count = 0
+        for key in self.measurements.keys():
+            measurement_count += len(self.measurements[key].series)
+
+        return measurement_count
+
+
 class Catchment(Location):
     """A catchment area in the study."""
     def __init__(self, name):
