@@ -8,6 +8,7 @@ time across all sites.
 """
 
 import pandas as pd
+import geopandas as gpd
 import numpy as np
 
 def read_variable_from_csv(filename):
@@ -113,9 +114,15 @@ class Location:
 
 
 class Site(Location):
-    def __init__(self, name):
+    def __init__(self, name, longitude=None, latitude=None):
         super().__init__(name)
         self.measurements = {}
+        if longitude and latitude:
+            self.location = gpd.GeoDataFrame(geometry = gpd.points_from_xy([longitude], [latitude], crs='EPSG:4326'))
+        else:
+            self.location  = gpd.GeoDataFrame()
+
+
 
     def add_measurement(self, measurement_id, data, units=None):
         if measurement_id in self.measurements.keys():
