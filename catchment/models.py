@@ -31,7 +31,7 @@ def read_variable_from_csv(filename):
     new_dataset = pd.DataFrame(index=dataset['Date'].unique())
 
     for site in dataset['Site'].unique():
-        newd_ataset[site] = dataset[dataset['Site'] == site].set_index('Date')["Rainfall (mm)"]
+        new_dataset[site] = dataset[dataset['Site'] == site].set_index('Date')["Rainfall (mm)"]
 
     new_dataset = new_dataset.sort_index()
 
