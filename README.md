@@ -2,6 +2,10 @@
 
 # RiverCatchment via Roadsplash
 
+"when it rains and pours
+the valleys of froome piddle
+we will know, we will"
+
 ![Continuous integration build in GitHub Actions](https://github.com/RoadSplash/python-intermediate-rivercatchment/workflows/CI/badge.svg?branch=main)
 
 Rivercatch is a command line tool, written in Python,
