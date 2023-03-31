@@ -10,7 +10,7 @@ we will know, we will"
 
 ![Continuous integration build in GitHub Actions](https://github.com/RoadSplash/python-intermediate-rivercatchment/workflows/CI/badge.svg?branch=main)
 
-Rivercatch is a command line tool, written in Python,
+RiverCatchment is a command line tool, written in Python,
 to process and visualise river measurement data from csv files.
 
 ## Main features
@@ -21,7 +21,7 @@ Here are some key features of Rivercatch:
 - Generate plots.
 
 ## Prerequisites
-RiverCatch requires the following Python packages:
+RiverCatchment requires the following Python packages:
 
 - [NumPy](https://www.numpy.org/) - makes use of NumPy's
 statistical functions
@@ -39,6 +39,7 @@ RiverCatch's unit tests:
 unit tests are written using pytest
 - [pytest-cov](https://pypi.org/project/pytest-cov/) - Adds test
 coverage stats to unit testing
+- [pylint](https://pypi.org/project/pylint/) - use pylint to automate code checking for PEP08 compliance.
 
 
 ## Acknowledgements
