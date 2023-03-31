@@ -1,4 +1,6 @@
-# Rivercatch
+<img alt="histogram" width="200" src=https://github.com/RoadSplash/branding/blob/main/roadsplash.jpeg>
+
+# RiverCatchment via Roadsplash
 
 ![Continuous integration build in GitHub Actions](https://github.com/RoadSplash/python-intermediate-rivercatchment/workflows/CI/badge.svg?branch=main)
 
