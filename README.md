@@ -1,6 +1,6 @@
 # Rivercatch
 
-![Continuous integration build in GitHub Actions](https://github.com/git-gurus/rivercatch/workflows/CI/badge.svg?branch=main)
+![Continuous integration build in GitHub Actions](https://github.com/RoadSplash/python-intermediate-rivercatchment/workflows/CI/badge.svg?branch=main)
 
 Rivercatch is a command line tool, written in Python,
 to process and visualise river measurement data from csv files.
