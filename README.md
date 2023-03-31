@@ -35,6 +35,6 @@ coverage stats to unit testing
 
 ## Acknowledgements
 
-This library was primarily developed by Laurents, Rosie, Jonny, and Amali.
+This library was primarily developed by some really super cool people: Laurents, Rosie, Jonny, and Amali.
 
 With support from the NERC organised workshop on Software Development for Earth and Environmental Scientists: Reproducible Research through Reusable, Reliable Code
