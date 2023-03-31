@@ -31,3 +31,10 @@ RiverCatch's unit tests:
 unit tests are written using pytest
 - [pytest-cov](https://pypi.org/project/pytest-cov/) - Adds test
 coverage stats to unit testing
+
+
+## Acknowledgements
+
+This library was primarily developed by Laurents, Rosie, Jonny, and Amali.
+
+With support from the NERC organised workshop on Software Development for Earth and Environmental Scientists: Reproducible Research through Reusable, Reliable Code
