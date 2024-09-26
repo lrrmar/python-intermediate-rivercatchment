@@ -11,6 +11,10 @@ import pandas as pd
 import geopandas as gpd
 import numpy as np
 
+
+def hello_world():
+    print('hello world')
+
 def read_variable_from_csv(filename):
     """Reads a named variable from a CSV file, and returns a
     pandas dataframe containing that variable. The CSV file must contain
@@ -136,6 +140,7 @@ class Site(Location):
         return pd.concat(
             [self.measurements[key].series[-1:] for key in self.measurements.keys()],
             axis=1).sort_index()
+
 
 class Catchment(Location):
     """A catchment area in the study."""
